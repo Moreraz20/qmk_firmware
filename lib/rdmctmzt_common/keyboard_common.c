@@ -509,17 +509,17 @@ void kb_housekeeping_task(void) {
         Keyboard_Info.Win_Lock     = INIT_WIN_NLOCK;
 #if LOGO_LED_ENABLE
         Keyboard_Info.Logo_On_Off     = 1;
-        Keyboard_Info.Logo_Mode       = 1; // Wave animation
-        Keyboard_Info.Logo_Hue        = 0;
-        Keyboard_Info.Logo_Saturation = 255;
+        Keyboard_Info.Logo_Mode       = LOGO_MODE_FIXED_WAVE; // Fixed wave, default color #8610FF
+        Keyboard_Info.Logo_Hue        = 191;
+        Keyboard_Info.Logo_Saturation = 239;
         Keyboard_Info.Logo_Brightness = 180;
         Keyboard_Info.Logo_Speed      = 2;
 #endif
 #if SIDE_LED_ENABLE
         Keyboard_Info.Side_On_Off     = 1;
-        Keyboard_Info.Side_Mode       = 1; // Wave animation
-        Keyboard_Info.Side_Hue        = 0;
-        Keyboard_Info.Side_Saturation = 255;
+        Keyboard_Info.Side_Mode       = SIDE_MODE_LIGHT; // Light (solid), default color #8610FF
+        Keyboard_Info.Side_Hue        = 191;
+        Keyboard_Info.Side_Saturation = 239;
         Keyboard_Info.Side_Brightness = 180;
         Keyboard_Info.Side_Speed      = 2;
 #endif

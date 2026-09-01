@@ -60,6 +60,11 @@
 #define RGB_MATRIX_SLEEP
 #define RGB_MATRIX_BACKLIGHT_COUNT 84
 
+// Default Backlight color on first boot / EEPROM reset: #8610FF
+#define RGB_MATRIX_DEFAULT_HUE 191
+#define RGB_MATRIX_DEFAULT_SAT 239
+#define RGB_MATRIX_DEFAULT_VAL 255
+
 // BLE configuration for TH85
 #define USER_BLE_ID (0X00A5) // TH85 BLE ID
 #define USER_BLE1_NAME "TH85-1"
