@@ -17,7 +17,7 @@
 							"showIf": "{id_qmk_rgblight_effect} != 0",
 							"label": "Brightness",
 							"type": "range",
-							"options": [0, 70],
+							"options": [0, 160],
 							"content": ["id_qmk_rgblight_brightness", 2, 1]
 						},
 						{
@@ -27,15 +27,11 @@
 							"options":
 							[
 								[ "none", 0 ],
-								[ "wave", 1 ],
-								[ "spectrum", 2 ],
-								[ "light", 3 ],
-								[ "green", 4 ],
-								[ "blue", 5 ],
-								[ "pink", 6 ],
-								[ "yellow", 7 ],
-								[ "white", 8 ],
-								[ "shutdown", 9 ]
+								[ "fixed wave", 1 ],
+								[ "wave", 5 ],
+								[ "spectrum", 6 ],
+								[ "breathe", 7 ],
+								[ "light", 9 ]
 							]
 						},
 						{
@@ -46,7 +42,7 @@
 							"content": ["id_qmk_rgblight_effect_speed", 2, 3]
 						},
 						{
-							"showIf": "{id_qmk_rgblight_effect} != 0 && {id_qmk_rgblight_effect} != 1 && {id_qmk_rgblight_effect} != 3 && {id_qmk_rgblight_effect} != 6",
+							"showIf": "{id_qmk_rgblight_effect} != 0 && {id_qmk_rgblight_effect} != 5 && {id_qmk_rgblight_effect} != 6",
 							"label": "Color",
 							"type": "color",
 							"content": ["id_qmk_rgblight_color", 2, 4]
@@ -99,28 +95,23 @@
                                 ["hue_breathing", 26],
                                 ["hue_pendulum", 27],
                                 ["hue_wave", 28],
-                                ["pixel_rain", 29],
-                                ["pixel_flow", 30],
-                                ["pixel_fractal", 31],
-                                ["typing_heatmap", 32],
-                                ["digital_rain", 33],
-                                ["solid_reactive_simple", 34],
-                                ["solid_reactive", 35],
-                                ["solid_reactive_wide", 36],
-                                ["solid_reactive_multiwide", 37],
-                                ["solid_reactive_cross", 38],
-                                ["solid_reactive_multicross", 39],
-                                ["solid_reactive_nexus", 40],
-                                ["solid_reactive_multinexus", 41],
-                                ["splash", 42],
-                                ["multisplash", 43],
-                                ["solid_splash", 44],
-                                ["solid_multisplash", 45],
-                                ["starlight_smooth", 46],
-                                ["starlight", 47],
-                                ["starlight_dual_sat", 48],
-                                ["starlight_dual_hue", 49],
-                                ["riverflow", 50]
+                                ["pixel_flow", 29],
+                                ["digital_rain", 30],
+                                ["solid_reactive", 31],
+                                ["solid_reactive_wide", 32],
+                                ["solid_reactive_multiwide", 33],
+                                ["solid_reactive_cross", 34],
+                                ["solid_reactive_multicross", 35],
+                                ["solid_reactive_nexus", 36],
+                                ["solid_reactive_multinexus", 37],
+                                ["splash", 38],
+                                ["multisplash", 39],
+                                ["solid_splash", 40],
+                                ["solid_multisplash", 41],
+                                ["starlight", 42],
+                                ["starlight_dual_hue", 43],
+                                ["starlight_dual_sat", 44],
+                                ["riverflow", 45]
                             ]
                         },
 						{
@@ -157,15 +148,11 @@
 							"options":
 							[
 								[ "none", 0 ],
-								[ "wave", 1 ],
-								[ "spectrum", 2 ],
-								[ "light", 3 ],
-								[ "green", 4 ],
-								[ "blue", 5 ],
-								[ "pink", 6 ],
-								[ "yellow", 7 ],
-								[ "white", 8 ],
-								[ "shutdown", 9 ]
+								[ "fixed wave", 1 ],
+								[ "wave", 5 ],
+								[ "spectrum", 6 ],
+								[ "breathe", 7 ],
+								[ "light", 9 ]
 							]
 						},
 						{
@@ -176,7 +163,7 @@
 							"content": ["id_qmk_audio_effect_speed", 4, 3]
 						},
 						{
-							"showIf": "{id_qmk_audio_effect} != 0 && {id_qmk_audio_effect} != 1 && {id_qmk_audio_effect} != 3 && {id_qmk_audio_effect} != 6",
+							"showIf": "{id_qmk_audio_effect} != 0 && {id_qmk_audio_effect} != 5 && {id_qmk_audio_effect} != 6",
 							"label": "Color",
 							"type": "color",
 							"content": ["id_qmk_audio_color", 4, 4]
@@ -308,7 +295,7 @@
 			],
 
 			[
-				{ "c":"#aaaaaa" },
+                { "c":"#aaaaaa" },
                 { "w":2.25, "h":1.0,  "x":0.0 },  "4,0",
                 { "c":"#cccccc" },
 				{ "w":1.0,  "h":1.0,  "x":0.0 },  "4,2",

@@ -351,6 +351,27 @@ void kb_show_current_connection_mode(void) {
     }
 }
 
+void kb_toggle_all_leds(void) {
+    bool enabled = !rgb_matrix_is_enabled();
+
+    if (enabled) {
+        rgb_matrix_enable();
+    } else {
+        rgb_matrix_disable();
+    }
+
+#if LOGO_LED_ENABLE
+    Keyboard_Info.Logo_On_Off = enabled;
+    Logo_Led_Update();
+#endif
+#if SIDE_LED_ENABLE
+    Keyboard_Info.Side_On_Off = enabled;
+    Side_Led_Update();
+#endif
+
+    Save_Flash_Set();
+}
+
 void kb_show_reset_progress(void) {
     if (reset_hold_phase) {
         // After 3 seconds of blinking, hold solid red for 1 second before reset
@@ -673,6 +694,11 @@ bool kb_process_record_common(uint16_t keycode, keyrecord_t *record) {
                 }
             }
         }
+            return true;
+        case QMK_RGB_TOGGLE:
+            if (!record->event.pressed) {
+                kb_toggle_all_leds();
+            }
             return true;
         case QMK_TEST_COLOUR: {
             if (!record->event.pressed) {
