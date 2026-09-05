@@ -81,6 +81,11 @@
 #define LED_SIDE_INDEX 92 // Side LED starting index (after 84 key + 8 logo)
 #define SIDE_LED_COUNT 38 // Number of side LEDs
 
+// Battery indicator: 10 LEDs over the number row (1-0), not the default's
+// top row (ESC-F11) - and match the factory manual's real red threshold.
+#define BATTERY_LED_COUNT 10
+#define BATTERY_LOW_THRESHOLD 30
+
 // LED Index Definitions for keyboard_common library
 #define LED_CONNECTION_INDEX 84 // Connection type indicator (underglow LED)
 #define LED_CAP_INDEX 48        // Caps Lock indicator (Caps key position)

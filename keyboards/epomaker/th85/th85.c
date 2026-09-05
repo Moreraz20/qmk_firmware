@@ -21,8 +21,8 @@
 // Keyboard-specific data
 // ===========================================================================
 
-// Battery indicator LED indices (top row, F1-F12)
-const uint8_t Led_Batt_Index_Tab[BATTERY_LED_COUNT] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+// Battery indicator LED indices (number row, 1-0)
+const uint8_t Led_Batt_Index_Tab[BATTERY_LED_COUNT] = {17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
 
 // clang-format off
 led_config_t g_led_config = { {
