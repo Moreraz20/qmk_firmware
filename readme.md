@@ -51,6 +51,16 @@ There are factory firmware files for some of these keyboards at <https://github.
 
 I welcome testers and PRs to have a broad open-source support of them.
 
+## About this fork (Moreraz20)
+
+This fork builds on top of [carlosedp/qmk_firmware](https://github.com/carlosedp/qmk_firmware) and focuses specifically on fixing bugs in its Epomaker TH85 support:
+
+- VIA Logo/Side LED routing (VIA couldn't control the Logo/Side effects correctly).
+- Battery indicator LEDs and low-battery color threshold.
+- An optional `custom` keymap adding reactive/idle RGB ripple effects on top of the same base.
+
+These fixes are submitted upstream at [carlosedp/qmk_firmware#35](https://github.com/carlosedp/qmk_firmware/pull/35) and [#36](https://github.com/carlosedp/qmk_firmware/pull/36).
+
 ## Documentation
 
 - [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
